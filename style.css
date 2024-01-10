@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins;
+}
+
+
+body {
+	background-color: #dedcdc;
+	padding: 20px 20px 140px;
+}
+
+a {
+	color: #5700e3;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#1d4e35;
+}
+
+li {
+	list-style-type: none;
+}
+
+.titulo {
+	color: #5700e3;
+	margin-bottom: 3%;
+	margin-top: 2%;
+	text-align: center;
+}
+
+.resposta {
+	cursor: pointer;
+	height: 80px;
+	width: 80px; 
+	align-items: center; 
+	border: 2px solid #101010;
+    border-radius: 5px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+.simbolotd {
+	font-size: 140%;
+	color: #5700e3;
+	background-color: #eeeeee;
+	text-align: center;
+}
+
+.simbolotd1 {
+	font-size: 300%;
+	color: #5700e3;
+	background-color: #eeeeee;
+	align-items: center;
+}
+
+.numtd {
+	font-size: 110%;
+	color: #000000;
+	font-family: verdana;
+	background-color: #a1a9e4;
+	text-align: center;
+}

@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Tabela mágica</title>
+    <link href="/joomla/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body aria-hidden="false">
+    <div class="row-fluid">
+        <main id="content" role="main" class="span12">
+            <div class="moduletable">
+
+                <div class="item-page" itemscope="" itemtype="https://schema.org/Article">
+                    <meta content="pt-PT">
+
+                    <div class="page-header" valign="center">
+                        <h2 class="titulo"> Tabela mágica </h2>
+                    </div>
+
+                    <div>
+                        <script language="javascript">
+                            ax = 0;
+
+                            function writeTable() {
+                                ax = Math.round(Math.random() * 25);
+                                alphaArray = new Array("&#164;", "&#8363;", "&#8710;", "&#167;", "&#9674;", "&#8225;", "&#8362;", "&#8224;", "&#182;", "&#9632;", "&#9633;", "&#9794;", "&#9792;", "&#230;", "&#960;", "&#8721;", "&#8734;", "&#8747;", "&#8801;", "&#8776;", "&#9786;", "&#247;", "&#9839;", "&#9830;", "&#9824;", "&#9827;", "&#9829;", "&#9834;")
+                                table = "<table border=0 cellspacing=2 cellpadding=2 width='75%'><tr>"
+                                qtd_celulas = 1;
+                                for (i = 99; i >= 1; i--) {
+                                    a = Math.round(Math.random() * 25);
+                                    if (i % 9 == 0 && i < 99) {
+                                        a = ax;
+                                    }
+
+                                    table += "<td class='numtd'>" + i + "<td class='simbolotd'>" + alphaArray[a] + "";
+                                    
+                                    if (qtd_celulas % 11 == 0) {
+                                        table += "<tr>";
+                                    }
+                                    
+                                    qtd_celulas++;
+                                }
+                                table += "";
+                                simbolo.innerHTML = table;
+                                simbolotd1.innerHTML = "";
+                            }
+
+
+                            function showAnswer() {
+                                simbolotd1.innerHTML = alphaArray[ax]
+                                simbolo.innerHTML = "<h3><a href='javascript:writeTable()'>Novamente?<br><br>"
+                            }
+                        </script>
+
+                        <div id="Centro">
+
+                            <center>
+
+                                <table cellspacing="1" cellpadding="1" width="75%">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="center" align="middle" width="75%">
+                                                <ul type="circle">
+                                                    <li>
+                                                        <p>Escolha um número de dois dígitos (ex: 72)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Subtraia esse número ppelos dois dígitos que o compõem (ex: 72 - 7 - 2 = 81)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Olhe para a tabela abaixo e identifique o símbolo correspondente ao resultado da subtração</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Observe o símbolo e clique no quadrado a seguir.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                </p>
+                                                <table class="resposta" onclick="showAnswer()" cellspacing="1"
+                                                    cellpadding="1">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="simbolotd1" id="simbolotd1"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td id="simbolo" valign="center" align="middle" width="75%">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </center>
+                        </div>
+
+                        <script>
+                            writeTable()
+                        </script>
+                    </div>
+
+
+                </div>
+</body>
+
+</html>
