@@ -1,5 +1,3 @@
 ## Tabela mágica
-
 ##
-
-(file:///C:/xampp/htdocs/tabela_magica/tabela_magica.png)
+Tabela mágica que adivinha o símbolo do número.
